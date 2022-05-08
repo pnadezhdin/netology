@@ -25,6 +25,7 @@ ansible-vault view site.yml
 ```
 6. Как выглядит команда запуска `playbook`, если переменные зашифрованы?
 ```
+ansible-playbook --ask-vault-pass playbook.yml
 ansible-playbook all -m ansible.builtin.debug -a var="new_user_password" -e "@vars.yml" --vault-id dev@a_password_file
 ```
 7. Как называется модуль подключения к host на windows?
